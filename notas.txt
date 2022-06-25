@@ -1,5 +1,0 @@
-alumnos,
-el operador define la cantidad de alumnos de una materia, 
--el operador carga las notas de los alumnos
-
-cuando llega al final de la carga
