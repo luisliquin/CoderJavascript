@@ -6,7 +6,7 @@ Entregable Nro 2
 
 
 //Declaracion e inicializacion de variables
-let cantAlum,     califAlum,     calif=[]
+let cantAlum,     califAlum,     calif=[],
     totCalif = 0, promCalif = 0, numbCalif = 0,
     califMax = 0, califMin = 0;
 
