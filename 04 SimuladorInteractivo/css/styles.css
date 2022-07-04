@@ -1,0 +1,11 @@
+html {
+    background-image: url('../image/image.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+div{
+    background-color: gray;
+    color: black;
+    background-size:auto;
+}
