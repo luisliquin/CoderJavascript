@@ -2,10 +2,6 @@
 let ordenadosAscendientes = [];
 let ordenadosDescendiente = [];
 
-function arrayElementBebida(id, nombre, marca, valor){
-    `id: ${id} ${nombre} ${marca} $ ${valor}`
-}
-
 //Carga de datos
 while (ingresar !== "END") {
     ingresar = prompt(
