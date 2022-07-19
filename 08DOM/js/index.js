@@ -52,18 +52,18 @@ for (const bebi of Bebidas){
     bebidas.append(list);
 }
 
-nombreApellido = prompt("Intruduzca Apellido!");
-dni = prompt("Intruduzca dni!");
-tarjataNum = prompt("Intruduzca nº tarjeta!");
-codSeg = prompt("codigo de seg");
+let nombreApellido = prompt("Intruduzca Apellido!");
+let dni = prompt("Intruduzca dni!");
+let tarjetaNum = prompt("Intruduzca nº tarjeta!");
+let codSeg = prompt("codigo de seg");
 
 //! DOM clientes
-persona.push = new Clientes(nombreApellido,dni,tarjataNum,codSeg);
+persona.push = new Clientes(nombreApellido,dni,tarjetaNum,codSeg);
 let cliente = document.getElementById("cliente");
 let li = document.createElement("li");
 li.innerHTML = `<H3> Datos del Comprador: </H3><br>
 
                 <p><b> Cliente: ${nombreApellido} </b></p>
                 <p><b> dni: ${dni}<b> </p>
-                <p> Tarjeta de cred: ${tarjataNum}</p>`;
+                <p> Tarjeta de cred: ${tarjetaNum}</p>`;
 cliente.append(li);
