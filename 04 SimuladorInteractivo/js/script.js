@@ -42,10 +42,8 @@ for (let i = 1; i <= cantAlum; i++) {
 
     if (califAlum == null || califAlum == "") {
         alert(`${mensVacio}`)
-        i--;
     }else if(isNaN(califAlum)){
         alert(`${mensNroErr}`);
-        i--;
     }else{
         numbCalif = parseFloat(califAlum)
         calif.push(numbCalif);
