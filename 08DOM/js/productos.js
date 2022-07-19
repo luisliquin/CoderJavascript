@@ -4,7 +4,7 @@ let listados = [];
 let acumulado = 0;
 let carrito = [];
 
-class Productores {
+class Productos {
     constructor(id,nombre,marca,valor){
         this.id = id;
         this.nombre = nombre;
@@ -13,43 +13,42 @@ class Productores {
     }
 }  
 
-
-const mercaderia =[ 
+const Bebidas =[ 
 {
     id: 0,
-    nombre: "cuna multiple", 
-    marca: "JMI",
-    valor: 39200,
+    nombre: "IPA", 
+    marca: "Quilmes",
+    valor: 300,
     },
     {
     id: 1,
-    nombre: "carrito", 
-    marca: "Carestino",
-    valor: 32999,
+    nombre: "Bock", 
+    marca: "Stella Artour",
+    valor: 320,
     },
     {
     id: 2,
-    nombre: "bañadera", 
-    marca: "Love",
-    valor: 8900,
+    nombre: "Cerveza rubia", 
+    marca: "Corona",
+    valor: 89,
     },
     {
     id: 3,
-    nombre: "Kit sacaleche", 
-    marca: "Event",
-    valor: 26999,
+    nombre: "Roja", 
+    marca: "Andes",
+    valor: 260,
     },
     {
     id: 4,
-    nombre: "Kit de mamaderas", 
-    marca: "Chicco",
-    valor: 9089,
+    nombre: "Citrica", 
+    marca: "Artesanal",
+    valor: 90,
     },
     {
     id: 5,
-    nombre: "chupetes", 
-    marca: "Pacifier",
-    valor: 1089,
+    nombre: "Doble Ipa", 
+    marca: "Artesanal",
+    valor: 108,
     },
 
 ]

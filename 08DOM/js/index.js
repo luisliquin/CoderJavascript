@@ -1,20 +1,28 @@
+//Declaracion de variables
+let ordenadosAscendientes = [];
+let ordenadosDescendiente = [];
 
-//! interactivo venta de prod
+function arrayElementBebida(id, nombre, marca, valor){
+    `id: ${id} ${nombre} ${marca} $ ${valor}`
+}
+
+//Carga de datos
 while (ingresar !== "END") {
     ingresar = prompt(
-        `Bienvenidos al Mundo!👨🏼‍🍼
-   seleccione el Id de los siguientes productos:
-   id: 0 cuna multiple JMI $ 39200,
-   id: 1 carrito Carestino  $ 32999,
-   id: 2 bañadera Love $ 8900,
-   id: 3 Kit sacaleche Event $ 26999
-   id: 4 kit mamaderas Chicco $9089
-   id: 5 chupetes Pacifier $1089
-   END para finalizar!`);
+    `Cerveceria "los andinos"!
+    seleccione el Id de los siguientes productos:
+    id: ${Bebidas[0].id} ${Bebidas[0].nombre} ${Bebidas[0].marca} $ ${Bebidas[0].valor},
+    id: ${Bebidas[1].id} ${Bebidas[1].nombre} ${Bebidas[1].marca} $ ${Bebidas[1].valor},
+    id: ${Bebidas[2].id} ${Bebidas[2].nombre} ${Bebidas[2].marca} $ ${Bebidas[2].valor},
+    id: ${Bebidas[3].id} ${Bebidas[3].nombre} ${Bebidas[3].marca} $ ${Bebidas[3].valor},
+    id: ${Bebidas[4].id} ${Bebidas[4].nombre} ${Bebidas[4].marca} $ ${Bebidas[4].valor},
+    id: ${Bebidas[5].id} ${Bebidas[5].nombre} ${Bebidas[5].marca} $ ${Bebidas[5].valor},
+    END para finalizar!`);
+
     if (ingresar >= 0 && ingresar <= 5) {
-        alert(`usted selecciono el producto ${mercaderia[ingresar].nombre} cuyo valor es ${mercaderia[ingresar].valor}`)
+        alert(`usted selecciono el producto ${Bebidas[ingresar].nombre} cuyo valor es ${mercaderia[ingresar].valor}`)
         console.log(ingresar)
-        acumulado = acumulado + mercaderia[ingresar].valor;
+        acumulado = acumulado + Bebidas[ingresar].valor;
         console.log(acumulado);
         alert(`el valor acumulado es ${acumulado}`);
         alert(`total de valor de la compra ${iva(acumulado)}`);
@@ -27,39 +35,27 @@ while (ingresar !== "END") {
     }
 }
 
-//! productos
-//TODO: por consola los productos ordenados por valor
-let ordenadosAscendientes = [];
-let ordenadosDescendiente = [];
-
-ordenadosAscendientes = mercaderia.map(elemento => elemento);
-ordenadosDescendiente = mercaderia.map(elemento => elemento);
+//Orden Ascendiente
+ordenadosAscendientes = Bebidas.map(elemento => elemento);
 ordenadosAscendientes.sort(function(a,b) { 
     return a.valor - b.valor});
-console.log("ordenados ascendiente");
-console.log(ordenadosAscendientes);
+
+//Orden descendiente
+ordenadosDescendiente = Bebidas.map(elemento => elemento);
 ordenadosDescendiente.sort(function(a,b) { 
     return b.valor - a.valor});
-console.log("ordenados descendiente");
-console.log(ordenadosDescendiente);
 
-//console.log(` DEBERIA APARECER LOS PRODUCTOS! ${carrito}`);
-
-//TODO: productos DOM
-
-let productos = document.getElementById("productos");
-for (const prod of mercaderia){
+let bebidas = document.getElementById("productos");
+for (const bebi of Bebidas){
     let list = document.createElement("li");
     list.innerHTML = 
-    `<h3>ID:${prod.id}</h3>
-    <p>desc: ${prod.nombre}</p>
-    <p>marca: ${prod.marca}</p>
-    <h3> $ ${prod.valor}</h3>`;
-    productos.append(list);
+    `<h3>ID:${bebi.id}</h3>
+    <p>desc: ${bebi.nombre}</p>
+    <p>marca: ${bebi.marca}</p>
+    <h3> $ ${bebi.valor}</h3>`;
+    bebidas.append(list);
 }
 
-
-//TODO: clientes DOM
 nombreApellido = prompt("Intruduzca Apellido!");
 dni = prompt("Intruduzca dni!");
 tarjataNum = prompt("Intruduzca nº tarjeta!");
