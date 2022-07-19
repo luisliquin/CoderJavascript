@@ -1,13 +1,12 @@
  body {
     background-color: rgb(127, 255, 227);
-    ;
  }
 
 h1 {
-    text-align: justify;
-    width: 250px;
+    text-align: center;
+    width: 10%;
     color: yellowgreen;
-    height: 250px;
+    height: 10%;
     box-sizing: border-box;
     padding: 0px;
     flex: auto;

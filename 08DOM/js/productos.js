@@ -1,4 +1,3 @@
-//! 
 let ingresar = "";
 let listados = [];
 let acumulado = 0;
@@ -54,4 +53,3 @@ const Bebidas =[
 ]
 
 const iva = a => a*1.21 ;
-

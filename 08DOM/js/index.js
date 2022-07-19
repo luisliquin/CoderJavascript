@@ -16,7 +16,7 @@ while (ingresar !== "END") {
     END para finalizar!`);
 
     if (ingresar >= 0 && ingresar <= 5) {
-        alert(`usted selecciono el producto ${Bebidas[ingresar].nombre} cuyo valor es ${mercaderia[ingresar].valor}`)
+        alert(`usted selecciono el producto ${Bebidas[ingresar].nombre} cuyo valor es ${Bebidas[ingresar].valor}`)
         console.log(ingresar)
         acumulado = acumulado + Bebidas[ingresar].valor;
         console.log(acumulado);
