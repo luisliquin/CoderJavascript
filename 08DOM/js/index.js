@@ -4,7 +4,7 @@ let ordenadosDescendiente = [];
 
 //Carga de datos
 while (ingresar !== "END") {
-    ingresar = prompt(
+    let ingresar = prompt(
     `Cerveceria "los andinos"!
     seleccione el Id de los siguientes productos:
     id: ${Bebidas[0].id} ${Bebidas[0].nombre} ${Bebidas[0].marca} $ ${Bebidas[0].valor},
@@ -18,7 +18,7 @@ while (ingresar !== "END") {
     if (ingresar >= 0 && ingresar <= 5) {
         alert(`usted selecciono el producto ${Bebidas[ingresar].nombre} cuyo valor es ${Bebidas[ingresar].valor}`)
         console.log(ingresar)
-        acumulado = acumulado + Bebidas[ingresar].valor;
+        let acumulado = acumulado + Bebidas[ingresar].valor;
         console.log(acumulado);
         alert(`el valor acumulado es ${acumulado}`);
         alert(`total de valor de la compra ${iva(acumulado)}`);
