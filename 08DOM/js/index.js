@@ -1,6 +1,16 @@
+/* 
+Desarrollador: Luis Liquin
+Fecha: 12/07/2022
+Entregable Integral
+*/
+
+
 //Declaracion de variables
 let ordenadosAscendientes = [];
 let ordenadosDescendiente = [];
+
+let acumulado,  bebidas, list,    nombreApellido, dni,
+    tarjeta,    codseg,  cliente, li
 
 //Carga de datos
 while (ingresar !== "END") {
@@ -18,7 +28,7 @@ while (ingresar !== "END") {
     if (ingresar >= 0 && ingresar <= 5) {
         alert(`usted selecciono el producto ${Bebidas[ingresar].nombre} cuyo valor es ${Bebidas[ingresar].valor}`)
         console.log(ingresar)
-        let acumulado = acumulado + Bebidas[ingresar].valor;
+        acumulado = acumulado + Bebidas[ingresar].valor;
         console.log(acumulado);
         alert(`el valor acumulado es ${acumulado}`);
         alert(`total de valor de la compra ${iva(acumulado)}`);
@@ -41,9 +51,9 @@ ordenadosDescendiente = Bebidas.map(elemento => elemento);
 ordenadosDescendiente.sort(function(a,b) { 
     return b.valor - a.valor});
 
-let bebidas = document.getElementById("productos");
+bebidas = document.getElementById("productos");
 for (const bebi of Bebidas){
-    let list = document.createElement("li");
+    list = document.createElement("li");
     list.innerHTML = 
     `<h3>ID:${bebi.id}</h3>
     <p>desc: ${bebi.nombre}</p>
@@ -52,17 +62,15 @@ for (const bebi of Bebidas){
     bebidas.append(list);
 }
 
-let nombreApellido = prompt("Intruduzca Apellido!");
-let dni = prompt("Intruduzca dni!");
-let tarjetaNum = prompt("Intruduzca nº tarjeta!");
-let codSeg = prompt("codigo de seg");
+nombreApellido = prompt("Intruduzca Apellido!");
+dni = prompt("Intruduzca dni!");
+tarjetaNum = prompt("Intruduzca nº tarjeta!");
+codSeg = prompt("codigo de seg");
 
-//! DOM clientes
 persona.push = new Clientes(nombreApellido,dni,tarjetaNum,codSeg);
-let cliente = document.getElementById("cliente");
-let li = document.createElement("li");
+cliente = document.getElementById("cliente");
+li = document.createElement("li");
 li.innerHTML = `<H3> Datos del Comprador: </H3><br>
-
                 <p><b> Cliente: ${nombreApellido} </b></p>
                 <p><b> dni: ${dni}<b> </p>
                 <p> Tarjeta de cred: ${tarjetaNum}</p>`;

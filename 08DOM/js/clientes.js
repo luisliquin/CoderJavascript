@@ -1,3 +1,9 @@
+/* 
+Desarrollador: Luis Liquin
+Fecha: 12/07/2022
+Entregable Integral
+*/
+
 let persona = [];
 
 class Clientes {

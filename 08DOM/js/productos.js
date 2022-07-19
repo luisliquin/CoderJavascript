@@ -1,3 +1,9 @@
+/* 
+Desarrollador: Luis Liquin
+Fecha: 12/07/2022
+Entregable 
+*/
+
 let ingresar = "";
 let listados = [];
 let acumulado = 0;
