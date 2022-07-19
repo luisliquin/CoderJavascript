@@ -9,13 +9,14 @@ Entregable Integral
 let ordenadosAscendientes = [];
 let ordenadosDescendiente = [];
 
-let acumulado,  bebidas, list,    nombreApellido, dni,
-    tarjeta,    codseg,  cliente, li
+let bebidas, list,    nombreApellido, dni,
+    tarjeta, codseg,  cliente, li
 
 //Carga de datos
 while (ingresar !== "END") {
     let ingresar = prompt(
     `Cerveceria "los andinos"!
+    Recuerde que los productos tienen 20% de iva
     seleccione el Id de los siguientes productos:
     id: ${Bebidas[0].id} ${Bebidas[0].nombre} ${Bebidas[0].marca} $ ${Bebidas[0].valor},
     id: ${Bebidas[1].id} ${Bebidas[1].nombre} ${Bebidas[1].marca} $ ${Bebidas[1].valor},
@@ -35,6 +36,8 @@ while (ingresar !== "END") {
         console.log(iva(acumulado));
     } else if (ingresar === "END") {
         alert("gracias por su compra!")
+        acumulado = 0;
+        window.location.reload();
     }
     else {
         alert("ingrese un numero valido");
